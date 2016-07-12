@@ -1,0 +1,14 @@
+{
+  "name": "cucumber-first-steps-sa1-265",
+  "version": "0.0.1",
+  "description": "Fist steps with cucumber-js",
+  "main": "index.js",
+  "scripts": {
+    "test": "pepino"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webdriverio": "^4.2.1"
+  }
+}
