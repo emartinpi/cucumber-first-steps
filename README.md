@@ -2,8 +2,8 @@
 You will need Selenium-Standalone, Cucumber.js installed.
 An easy way to do this is:
 
-    ```npm install -g cucumber```
-    ```npm install -g selenium-standalone```
+    npm install -g cucumber
+    npm install -g selenium-standalone
 
 As PageObjects are implemented using WebdriverIO API, you'll need this package:
 
