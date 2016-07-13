@@ -7,25 +7,25 @@ An easy way to do this is:
 
 As PageObjects are implemented using WebdriverIO API, you'll need this package:
 
-    ```npm install webdriverio```
+    npm install webdriverio
 
 
 # Prepare the environment
 Startup Selenium Standalone server with:
 
-$ selenium-standalone start
+    $ selenium-standalone start
 
 And leave the terminal open.
 
 # Glomo is needed for this example
 You need to startup a demo of GloMo. So, go to GloMo.gb, get it and run
 
-$ gulp serve
+    $ gulp serve
 
 
 # Startup Cucumber to execute Funtional Tests
 In another terminal, execute
 
-$ cucumber.js -r steps/ -r support/
+    $ cucumber.js -r steps/ -r support/
 
 Maybe you'd need to change the port of running GloMo demo (from 3000 to 80).
