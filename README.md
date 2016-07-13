@@ -1,21 +1,25 @@
 # Installation
 You will need Selenium-Standalone, Cucumber.js installed.
 An easy way to do this is:
+
     ```npm install -g cucumber```
     ```npm install -g selenium-standalone```
 
 As PageObjects are implemented using WebdriverIO API, you'll need this package:
+
     ```npm install webdriverio```
 
 
 # Prepare the environment
 Startup Selenium Standalone server with:
+
 $ selenium-standalone start
 
 And leave the terminal open.
 
 # Glomo is needed for this example
 You need to startup a demo of GloMo. So, go to GloMo.gb, get it and run
+
 $ gulp serve
 
 
