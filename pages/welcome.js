@@ -4,21 +4,27 @@ var view = {
 
   splash: '#splash',
 
-  //accessButton: 'buzz-ui-organism-welcome button'
+  accessButton: '#btnAccess'
 
-  accessButton: 'glomo-ui-organism-access-welcome button'
+  //accessButton: 'glomo-ui-organism-access-welcome button'
 
 };
 
 var actions = {
 
 	waitForLoad: function() {
-		  browser.waitForVisible(view.accessButton);
-      return browser.waitForVisible(view.splash, null, true);
+    var element1 = browser.getText(view.splash);
+    var element2 = browser.getText(view.accessButton);
+    console.log(element1);
+    console.log(element2);
+		return browser
+      .waitForVisible(view.accessButton)
+      .waitForVisible(view.splash);
 	},
 
   enter: function() {
-    return browser.click(view.accessButton);
+    return browser
+      .click(view.accessButton);
   }
 
 };

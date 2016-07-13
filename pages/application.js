@@ -5,10 +5,11 @@
 var actions = {
 
   start: function() {
-    console.log(browser);
+
 		return browser
-			.url('/index.html');
-	}
+      .init()
+      .url('http://localhost/#/welcome');
+  }
 
 };
 

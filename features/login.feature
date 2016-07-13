@@ -1,29 +1,14 @@
 @login
-Feature: Welcome
+Feature: Login screen
 
-  This feature describes welcome screen. This screen is displayed when a user
+  This feature describes Login screen.
 
-  Scenario: Login ok
-    Given I am on the Login screen
-    When I introduce my valid credentials
-    Then I should see the welcome page
+  Scenario: Successful login
+    Given A user on the Login screen
+    When  He introduces his valid credentials
+    Then He should see the welcome page
 
-  Scenario: LoginDos ok
-    Given I am on the LoginDos screen
-    When I introduce my valid credentials
-    Then I should see the welcome page
-
-  Scenario: Login wrong
-    Given I am on the Login screen
-    When I introduce wrong credentials
-    Then I should receive an error message
-
-  Scenario: Login without user
-  Given I am on the Login screen
-    When I introduce password but not identifier
-    Then I should not be allowed to log in
-
-  Scenario: Login without password
-    Given I am on the Login screen
-    When I introduce identifier but not password
-    Then I should not be allowed to log in
+  Scenario: Wrong Login
+    Given A user on the Login screen
+    When He introduces wrong credentials
+    Then He should receive an error message

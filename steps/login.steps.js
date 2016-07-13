@@ -5,61 +5,33 @@ var poLogin = require('../pages/login');
 
 module.exports = function() {
 
-  this.Given(/^I am on the Login screen$/, function() {
-    return application
+  this.Given(/^A user on the Login screen$/, function(done) {
+    application
       .start()
       .then(poWelcome.waitForLoad)
       .then(poWelcome.enter)
-      .then(poLogin.waitForLoad);
+      .then(poLogin.waitForLoad)
+      .call(done);
   });
 
-  /*this.Given(/^I am on the LoginDos screen$/, function() {
-    application.start();
-    poWelcome.waitForLoad();
-    poWelcome.enter();
-    poLogin.waitForLoad();
-  });*/
-
-  /*this.When(/^I introduce my valid credentials$/, function (callback) {
+  this.When(/^He introduces his valid credentials$/, function (callback) {
     // Write code here that turns the phrase above into concrete actions
-    //callback(null, 'pending');
-    callback(null, true);
+    callback(null, 'pending');
   });
 
-  this.Then(/^I should see the welcome page$/, function (callback) {
+  this.Then(/^He should see the welcome page$/, function (callback) {
     // Write code here that turns the phrase above into concrete actions
-    //callback(null, 'pending');
-    callback(null, true);
+    callback(null, 'pending');
   });
 
-  this.When(/^I introduce wrong credentials$/, function (callback) {
+  this.When(/^He introduces wrong credentials$/, function (callback) {
     // Write code here that turns the phrase above into concrete actions
-    //callback(null, 'pending');
-    callback(null, true);
+    callback(null, 'pending');
   });
 
-  this.Then(/^I should receive an error message$/, function (callback) {
+  this.Then(/^He should receive an error message$/, function (callback) {
     // Write code here that turns the phrase above into concrete actions
-    //callback(null, 'pending');
-    callback(null, true);
+    callback(null, 'pending');
   });
-
-  this.When(/^I introduce password but not identifier$/, function (callback) {
-    // Write code here that turns the phrase above into concrete actions
-    //callback(null, 'pending');
-    callback(null, true);
-  });
-
-  this.Then(/^I should not be allowed to log in$/, function (callback) {
-    // Write code here that turns the phrase above into concrete actions
-    //callback(null, 'pending');
-    callback(null, true);
-  });
-
-  this.When(/^I introduce identifier but not password$/, function (callback) {
-    // Write code here that turns the phrase above into concrete actions
-    //callback(null, 'pending');
-    callback(null, true);
-  });*/
 
 };

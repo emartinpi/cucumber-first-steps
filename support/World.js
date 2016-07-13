@@ -1,13 +1,9 @@
 
-// init WebdriverIO
-var driverOpts = { desiredCapabilities: { browserName: 'chrome' } };
-
 function World() {
-  browser = require('webdriverio').remote(driverOpts).init().end();
-
-  this.visit = function (url, callback) {
-    browser.visit(url, callback);
-  };
+  // init WebdriverIO
+  browser = require('webdriverio').remote({
+    desiredCapabilities:{browserName: 'chrome'}
+  });
 }
 
 module.exports = function() {
