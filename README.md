@@ -1,9 +1,8 @@
 # Installation
-You will need Selenium-Standalone, Cucumber.js installed.
+You will need Cucumber.js installed.
 An easy way to do this is:
 
     npm install -g cucumber
-    npm install -g selenium-standalone
 
 Install dependencies & devDependencies
 
