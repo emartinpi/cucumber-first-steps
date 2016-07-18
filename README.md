@@ -14,6 +14,7 @@ This command will install:
 - cucumber (It's needed locally as well)
 - wdio-cucumber-framework (Adapter between cucumber and webdriverio)
 - wdio-spec-reporter (plugin reporter)
+- wdio-selenium-standalone-service (needed to wdio startup a selenium server)
 
 # Prepare the environment
 Startup Selenium Standalone server with:
