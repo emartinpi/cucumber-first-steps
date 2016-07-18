@@ -5,9 +5,15 @@ An easy way to do this is:
     npm install -g cucumber
     npm install -g selenium-standalone
 
-Install all local packages
+Install dependencies & devDependencies
 
     npm install 
+
+This command will install:
+- webdriverio (webdriver module for nodejs) 
+- cucumber (It's needed locally as well)
+- wdio-cucumber-framework (Adapter between cucumber and webdriverio)
+- wdio-spec-reporter (plugin reporter)
 
 # Prepare the environment
 Startup Selenium Standalone server with:
