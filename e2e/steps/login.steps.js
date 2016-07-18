@@ -5,13 +5,13 @@ var poLogin = require('../pages/login');
 
 module.exports = function() {
 
-  this.Given(/^A user on the Login screen$/, function(done) {
+  this.Given(/^A user on the Login screen$/, function() {
     application
       .start()
       .then(poWelcome.waitForLoad)
       .then(poWelcome.enter)
       .then(poLogin.waitForLoad)
-      .call(done);
+      .call();
   });
 
   this.When(/^He introduces his valid credentials$/, function (callback) {

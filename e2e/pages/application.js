@@ -5,9 +5,8 @@
 var actions = {
 
   start: function() {
-
-		return browser
-      .init()
+	return browser
+      //.init()
       .url('http://localhost/#/welcome');
   }
 

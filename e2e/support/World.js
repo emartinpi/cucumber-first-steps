@@ -1,9 +1,8 @@
-
 function World() {
   // init WebdriverIO
-  browser = require('webdriverio').remote({
+  /*browser = require('webdriverio').remote({
     desiredCapabilities:{browserName: 'chrome'}
-  });
+  });*/
 }
 
 module.exports = function() {
