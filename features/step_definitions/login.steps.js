@@ -1,7 +1,7 @@
 'use strict';
-var application = require('../pages/application');
-var poWelcome = require('../pages/welcome');
-var poLogin = require('../pages/login');
+var application = require('../pages/application.page');
+var poWelcome = require('../pages/welcome.page');
+var poLogin = require('../pages/login.page');
 
 module.exports = function() {
 

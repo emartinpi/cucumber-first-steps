@@ -11,8 +11,8 @@ var actions = {
 
 	waitForLoad: function() {
 		return browser
-                .waitForExist(view.user)
-                .waitForExist(view.password);
+                .waitForVisible(view.user)
+                .waitForVisible(view.password);
 	},
 
 	_login: function(user, password) {

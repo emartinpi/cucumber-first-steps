@@ -9,7 +9,7 @@ var actions = {
 
     waitForLoad: function() {
         return browser
-            .waitForVisible(view.accessButton, 5000);
+            .waitForExist(view.accessButton, 5000);
     },
 
     enter: function() {
