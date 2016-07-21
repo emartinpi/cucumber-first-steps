@@ -15,7 +15,7 @@ This command will install:
 - wdio-spec-reporter (plugin reporter)
 - wdio-selenium-standalone-service (needed to wdio startup a selenium server)
 
-# Prepare the environment
+# Prepare the environment (only if you're gonna use cucumber.js)
 Startup Selenium Standalone server with:
 
     $ selenium-standalone install
@@ -28,9 +28,11 @@ You need to startup a demo of GloMo. So, go to GloMo.gb, get it and run
 
     $ cells app:serve
 
+# Execute Funtional Tests (with cucumber.js cli)
 
-# Execute Funtional Tests
-In another terminal, execute
+    $ cucumber.js
+
+# Execute Funtional Tests (with wdio cli)
 
     $ ./node_modules/.bin/wdio wdio.conf.js
     
