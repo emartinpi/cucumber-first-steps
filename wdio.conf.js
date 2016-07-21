@@ -10,7 +10,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './e2e/features/**/*.feature'
+        './features/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -117,7 +117,7 @@ exports.config = {
     reporters: ['spec'],
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
-        require: ['./e2e/support/', './e2e/steps/'],        // <string[]> (file/dir) require files before executing features
+        require: [],        // <string[]> (file/dir) require files before executing features
         backtrace: false,   // <boolean> show full backtrace for errors
         compiler: [],       // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         dryRun: false,      // <boolean> invoke formatters without executing steps
@@ -128,7 +128,7 @@ exports.config = {
         source: true,       // <boolean> hide source uris
         profile: [],        // <string[]> (name) specify the profile to use
         strict: false,      // <boolean> fail if there are any undefined or pending steps
-        tags: ['@login'],           // <string[]> (expression) only execute the features or scenarios with tags matching the expression
+        tags: [],           // <string[]> (expression) only execute the features or scenarios with tags matching the expression
         timeout: 20000,     // <number> timeout for step definitions
         ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
     },

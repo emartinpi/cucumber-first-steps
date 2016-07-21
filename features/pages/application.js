@@ -1,12 +1,10 @@
 'use strict';
 
-
-
 var actions = {
 
   start: function() {
 	return browser
-      //.init()
+      .init()
       .url('http://localhost/#/welcome');
   }
 

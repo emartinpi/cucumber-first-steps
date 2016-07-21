@@ -5,13 +5,13 @@ var poLogin = require('../pages/login');
 
 module.exports = function() {
 
-  this.Given(/^A user on the Login screen$/, function() {
+  this.Given(/^A user on the Login screen$/, function(callback) {
     application
       .start()
       .then(poWelcome.waitForLoad)
       .then(poWelcome.enter)
       .then(poLogin.waitForLoad)
-      .call();
+      .call(callback);
   });
 
   this.When(/^He introduces his valid credentials$/, function (callback) {
@@ -24,7 +24,7 @@ module.exports = function() {
     callback(null, 'pending');
   });
 
-  this.When(/^He introduces wrong credentials$/, function (callback) {
+/*  this.When(/^He introduces wrong credentials$/, function (callback) {
     // Write code here that turns the phrase above into concrete actions
     callback(null, 'pending');
   });
@@ -32,6 +32,6 @@ module.exports = function() {
   this.Then(/^He should receive an error message$/, function (callback) {
     // Write code here that turns the phrase above into concrete actions
     callback(null, 'pending');
-  });
+  });*/
 
 };

@@ -1,24 +1,18 @@
 'use strict';
 
 var view = {
-
-	user: '#user',
-
-	password: '#password',
-
+	user: 'input[name]',
+	password: 'input[type=password]',
 	acceptButton: '.main__options-btn--login',
-
 	errorMessage: 'buzz-ui-molecule-alert-slide#msg'
-
 };
 
 var actions = {
 
 	waitForLoad: function() {
 		return browser
-			.waitForVisible(view.user)
-			.waitForVisible(view.password)
-			.waitForVisible(view.acceptButton);
+                .waitForExist(view.user)
+                .waitForExist(view.password);
 	},
 
 	_login: function(user, password) {
