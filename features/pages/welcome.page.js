@@ -5,19 +5,22 @@ var view = {
   accessButton: '#btnAccess'
 };
 
-var actions = {
+var WelcomePage = {
+
+    open: function() {
+        return browser.url('http://localhost/#/welcome');
+    },
 
     waitForLoad: function() {
         return browser
             .waitForExist(view.accessButton, 5000);
     },
 
-    enter: function() {
+    enterLogin: function() {
         return  browser
             .waitForExist(view.splash, 4000, true)
             .click(view.accessButton);
     }
-
 };
 
-module.exports = actions;
+module.exports = WelcomePage;

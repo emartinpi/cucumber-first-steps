@@ -1,5 +1,5 @@
 'use strict';
-var application = require('../pages/application.page');
+var application = require('../pages/application');
 var poWelcome = require('../pages/welcome.page');
 var poLogin = require('../pages/login.page');
 
@@ -7,9 +7,10 @@ module.exports = function() {
 
   this.Given(/^A user on the Login screen$/, function(callback) {
     application
-      .start()
+      .init()
+      .then(poWelcome.open)
       .then(poWelcome.waitForLoad)
-      .then(poWelcome.enter)
+      .then(poWelcome.enterLogin)
       .then(poLogin.waitForLoad)
       .call(callback);
   });
