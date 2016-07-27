@@ -35,9 +35,12 @@ module.exports = function() {
             .pause(1500)
             .getTitle()
             .then(function(title){
-                assert.equal('cats - Buscar con Google', title);
+                return assert.equal('cats - Buscar con Google', title);  
             })
             .then(callback)
+            .catch(function(e) {
+                callback(e);
+            })          
     });
 
     this.Then(/^dogs should be mentioned in the results$/, function (callback) {
@@ -45,8 +48,11 @@ module.exports = function() {
             .pause(1500)
             .getTitle()
             .then(function(title){
-                assert.equal('dogs - Buscar con Google', title);
+                return assert.equal('dogs - Buscar con Google', title);
             })
             .then(callback)
+            .catch(function(e) {
+                callback(e);
+            })
     });
 };
