@@ -10,12 +10,8 @@ Install dependencies & devDependencies
 
 This command will install:
 - webdriverio (webdriver module for nodejs) 
-- cucumber (It's needed locally as well)
-- wdio-cucumber-framework (Adapter between cucumber and webdriverio)
-- wdio-spec-reporter (plugin reporter)
-- wdio-selenium-standalone-service (needed to wdio startup a selenium server)
 
-# Prepare the environment (only if you're gonna use cucumber.js)
+# Prepare the environment
 Startup Selenium Standalone server with:
 
     $ selenium-standalone install
@@ -23,16 +19,7 @@ Startup Selenium Standalone server with:
 
 And leave the terminal open.
 
-# Glomo is needed for this example
-You need to startup a demo of GloMo. So, go to GloMo.gb, get it and run
-
-    $ cells app:serve
-
 # Execute Funtional Tests (with cucumber.js cli)
 
     $ cucumber.js
-
-# Execute Funtional Tests (with wdio cli)
-
-    $ ./node_modules/.bin/wdio wdio.conf.js
-    
+        
