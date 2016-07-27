@@ -10,6 +10,6 @@ Scenario Outline:
 	Then <query> should be mentioned in the results
 
     Examples:
-        |  query  |  
-        |  cats   |
-        |  dogs   |   
+        |  query   |  
+        |  "cats"  |
+        |  "dogs"  |   

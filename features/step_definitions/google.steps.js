@@ -12,15 +12,9 @@ module.exports = function() {
             .call(callback);
     });
 
-    this.When(/^I add cats as to the search box$/, function (callback) {
+    this.When(/^I add "([^"]*)" as to the search box$/, function (query, callback) {
         googlePage
-            .typeQuery('cats')
-            .call(callback);
-    });
-
-    this.When(/^I add dogs as to the search box$/, function (callback) {
-        googlePage
-            .typeQuery('dogs')
+            .typeQuery(query)
             .call(callback);
     });
 
@@ -30,29 +24,16 @@ module.exports = function() {
             .call(callback);
     });
 
-    this.Then(/^cats should be mentioned in the results$/, function (callback) {
+    this.Then(/^"([^"]*)" should be mentioned in the results$/, function (query, callback) {
         browser
             .pause(1500)
             .getTitle()
             .then(function(title){
-                return assert.equal('cats - Buscar con Google', title);  
+                return assert.equal(query + ' - Buscar con Google', title);  
             })
             .then(callback)
             .catch(function(e) {
                 callback(e);
             })          
-    });
-
-    this.Then(/^dogs should be mentioned in the results$/, function (callback) {
-        browser
-            .pause(1500)
-            .getTitle()
-            .then(function(title){
-                return assert.equal('dogs - Buscar con Google', title);
-            })
-            .then(callback)
-            .catch(function(e) {
-                callback(e);
-            })
     });
 };
